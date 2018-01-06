@@ -9,7 +9,7 @@ var usernames = [];
 
 
 
-var port = process.env.Port || 8080;
+var port = process.env.PORT || 8080;
 //setting port
 server.listen(port,function(err){
   if(err)
