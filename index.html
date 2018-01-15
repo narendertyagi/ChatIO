@@ -15,10 +15,13 @@
 
     #chatWindow{
       height: 300px;
+      overflow-y:scroll;
+      scroll-behavior:smooth;
     }
 
     #mainWrapper{
       display:none;
+
     }
 
     #chatWrapper{
@@ -48,6 +51,11 @@
       padding: 10px;
 
 
+
+    }
+
+    #messageForm{
+      margin:10px 0px;
     }
 
     input{
@@ -136,8 +144,10 @@
           $message.val('');
         });
         socket.on('new message',function(data){
+          
           $chat.append('<strong>' +data.user + '</strong> : ' + data.msg + '<br/>');
         });
+
       });
 
       </script>
